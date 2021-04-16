@@ -1,0 +1,92 @@
+.fams {
+  background-color: var(--whete);
+  margin-top: 5rem;
+}
+.list-prodact {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.left-prodact {
+  height: 300px;
+  width: 47%;
+  display: flex;
+  border: 2px black;
+  background-color: var(--primaryColor);
+  padding: 2rem;
+  /* margin-right: 1%; */
+}
+.left-prodact img {
+  height: 100%;
+}
+
+.left-prodact:last-child {
+  margin-right: 0px;
+}
+.div-img {
+  width: 50%;
+  padding: 0px 20px;
+}
+.infoProdact {
+  margin: auto;
+}
+.infoProdact p {
+  margin-bottom: 2px;
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.infoProdact h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.SHOP {
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem 1.4rem;
+  margin-top: 1.3rem;
+  border-radius: 3rem;
+  border: 2px solid var(--secondaryColor);
+  color: var(--primaryColor);
+  background-color: var(--secondaryColor);
+  transition: all 0.3s ease-in-out;
+}
+.SHOP :hover {
+  background-color: wheat;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 555px) {
+  .list-prodact {
+    display: block;
+  }
+  .left-prodact {
+    width: 100%;
+    margin-top: 5rem;
+    text-align: center;
+  }
+}
+.list {
+  margin-top: 20px;
+  background-color: var(--primaryColor);
+  text-align: center;
+  padding: 10px;
+}
+.list li {
+  list-style: square;
+}
+.control-slid {
+  text-align: center;
+}
+.control-slid button {
+  margin: 10px 15px;
+  padding: 5px 10px;
+  border: none;
+  font-size: 2rem;
+}
+.control-slid :hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
