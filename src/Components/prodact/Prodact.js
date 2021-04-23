@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Prodact = (props) => {
@@ -70,9 +71,14 @@ const Prodact = (props) => {
           </div>
           <p className="card-text"> $ {props.price}</p>
         </div>
-        <a className="btn-add">
-          <button className="product__btn">Add To Cart</button>
-        </a>
+        <Link to={`/prodact/${props.id}`} className="btn-add">
+          <button
+            className="product__btn"
+            // onClick={() => this.addToCart(prodact, quantity)}
+          >
+            Detals
+          </button>
+        </Link>
       </div>
     </div>
   );
@@ -83,4 +89,5 @@ const Prodact = (props) => {
 //       dispatch(addToCart(prodactInfo, quantity)),
 //   };
 // };
-export default Prodact;
+
+export default connect()(Prodact);

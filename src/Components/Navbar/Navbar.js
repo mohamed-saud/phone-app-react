@@ -82,7 +82,7 @@ function Navbar(props) {
 const mapStateToProps = (state) => {
   return {
     totatlQuantity: state.card.reduce(
-      (total, item) => parseInt(total) + parseInt(item.quantity),
+      (total, item) => total + item.Quantity,
       0
     ),
   };

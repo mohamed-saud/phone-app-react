@@ -17,11 +17,7 @@ import Prodact from "./Components/ProdactDetals/ProdactDetals";
 import { getAll } from "../src/API/prodactAPI";
 import SignUp from "./Components/SignIn/SignUp";
 const mapStateToProps = (state) => {
-  return {
-    dishes: state.dishes,
-    comments: state.comments,
-    leaders: state.leaders,
-  };
+  return { state };
 };
 
 class App extends Component {

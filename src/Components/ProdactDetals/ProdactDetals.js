@@ -13,12 +13,10 @@ class ProdactDetals extends Component {
   state = {
     loding: true,
     prodact: {},
-    quantity: 1,
     image: "",
   };
 
   componentDidMount() {
-    console.log(this.state.prodact);
     const id = this.props.match.params.id;
 
     getById(parseInt(id)).then((prodact) => {
@@ -56,9 +54,8 @@ class ProdactDetals extends Component {
       });
     }
   };
-  ss = this.state.quantity;
-  addToCart = (prodact) => {
-    this.props.addToCart(prodact, this.state.quantity);
+  addToCart = (prodact, quantity) => {
+    this.props.addToCart(prodact, quantity);
   };
   render() {
     const prodact = this.state.prodact;

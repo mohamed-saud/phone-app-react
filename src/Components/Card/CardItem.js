@@ -6,12 +6,6 @@ import { RemoveFromCard } from "../../Redux/actions/actins";
 const CardItem = (props) => {
   const { item, index } = props;
   const { prodact } = item;
-  const chek_length = () => {
-    if (props.quantity === 0) {
-      return;
-      <div>no valu</div>;
-    }
-  };
 
   return (
     <div className="card " style={{ marginTop: "10px" }}>
@@ -80,9 +74,9 @@ const CardItem = (props) => {
         </div>
         <p className="card-text"> $ {prodact.price}</p>
 
-        <p>{item.quantity}</p>
+        <p>{item.Quantity}</p>
 
-        <p>Total: ${prodact.price * item.quantity} </p>
+        <p>Total: ${prodact.price * item.Quantity} </p>
       </div>
       <a className="btn-add">
         <button
