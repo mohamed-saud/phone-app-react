@@ -6,7 +6,6 @@ const Tabsprodact = () => {
   const [toogelState, setToogelState] = useState(1);
   const toggelTabs = (indax) => {
     setToogelState(indax);
-    console.log(setToogelState);
   };
   return (
     <div>

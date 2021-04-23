@@ -7,14 +7,7 @@ import Tabsprodact from "../tabs/Tabsprodact";
 import { getAll } from "../../API/prodactAPI";
 
 const http = new XMLHttpRequest();
-http.onreadystatechange = function () {
-  if (this.readyState === 4 && this.status == 200) {
-    var myObj = JSON.parse(this.responseText);
-    console.log(myObj);
-  }
-};
-http.open("GET", "../../API/prodacts.json", true);
-http.send();
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -53,7 +46,7 @@ const TowProdact = (props) => {
             <div className="infoProdact ">
               <p>Phone Device Presets</p>
               <h3>SMARTPHONES</h3>
-              <Link className="SHOP">SHOP NOW</Link>
+              <a className="SHOP">SHOP NOW</a>
             </div>
           </div>
           <div className="left-prodact   ">
@@ -63,7 +56,7 @@ const TowProdact = (props) => {
             <div className="infoProdact">
               <p>Phone Device Presets</p>
               <h3>HEADPHONES</h3>
-              <Link className="SHOP">SHOP NOW</Link>
+              <a className="SHOP">SHOP NOW</a>
             </div>
           </div>
         </div>

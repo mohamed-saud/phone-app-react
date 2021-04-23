@@ -40,17 +40,16 @@ class App extends Component {
   }
 
   render() {
-    // console.log(this.props.dishes[0].id);
     return (
       <div className="App">
         <Router>
           <Navbar />
           <Switch>
             <Route path="/" exact>
-              <Home prodact={this.state.prodact} />
+              <Home prodact={this.props.dishes} />
             </Route>
             <Route path="/category" exact>
-              <Category prodact={this.state.prodact} />
+              <Category prodact={this.props.dishes} />
             </Route>
             <Route path="/Blog">
               <Blog />
@@ -70,4 +69,4 @@ class App extends Component {
   }
 }
 
-export default connect(mapStateToProps)(App);
+export default withRouter(connect(mapStateToProps)(App));

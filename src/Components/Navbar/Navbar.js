@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Button } from "../Button/Button";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import { connect } from "react-redux";
 
-function Navbar() {
+function Navbar(props) {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -57,7 +58,7 @@ function Navbar() {
             <li className="nav-item amunt">
               <Link to="/card" className="nav-links" onClick={closeMobileMenu}>
                 <i className="fas fa-shopping-cart">
-                  <span>5</span>
+                  <span>{props.totatlQuantity}</span>
                 </i>
               </Link>
             </li>
@@ -78,5 +79,12 @@ function Navbar() {
     </>
   );
 }
-
-export default Navbar;
+const mapStateToProps = (state) => {
+  return {
+    totatlQuantity: state.card.reduce(
+      (total, item) => parseInt(total) + parseInt(item.quantity),
+      0
+    ),
+  };
+};
+export default connect(mapStateToProps)(Navbar);
